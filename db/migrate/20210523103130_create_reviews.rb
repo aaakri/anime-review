@@ -6,6 +6,8 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.references :anime, foreign_key: true
 
       t.timestamps
+      
+      t.index [:anime_id, :user_id], unique: true
     end
   end
 end

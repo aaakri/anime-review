@@ -9,7 +9,7 @@ class AnimesController < ApplicationController
   def show
     @anime = Anime.find(params[:id])
     @review = current_user.reviews.build(anime: @anime)
-    @reviews = Review.where(anime_id: params[:id])
+    @reviews = @anime.reviews
   end
 
   def new

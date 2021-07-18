@@ -13,6 +13,7 @@
 
 <%= render 'reviews/reviews', reviews: @reviews %>
 
+<% unless current_user.reviews.where(anime_id: @anime.id).exists? %>
   <div class="row">
     <aside class="col-sm-4">
       <%= form_with(model: @review, local: true) do |f| %>
@@ -24,3 +25,4 @@
       <% end %>
     </aside>
   </div>
+<% end %>
