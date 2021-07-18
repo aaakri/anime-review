@@ -1,0 +1,9 @@
+
+<ul>
+  <% reviews.each do |review| %>
+      <li><%= link_to(review.anime.title + ': ', review.anime) unless controller_name == 'animes' %>  <%= review.content %></li>
+      <% if review.user == current_user %>
+        <%= link_to "delete", review, method: :delete,data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-sm"  %>
+      <% end %>
+  <% end %>  
+</ul>

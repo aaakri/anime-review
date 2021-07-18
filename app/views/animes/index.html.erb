@@ -1,11 +1,16 @@
 <h1>アニメ一覧</h1>
 
-<ul>
-  <% @animes.each do |anime| %>
-      <li><%= link_to anime.id, anime %> :  <%= anime.title %></li>
+<%= render 'animes', animes: @animes %>
 
-  <% end %>  
-</ul>
+<%= link_to "新規登録はこちら", new_anime_path %>
+
+  
+
+
+
+
+
+
 
 
 

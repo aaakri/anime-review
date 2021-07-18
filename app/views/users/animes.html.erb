@@ -5,6 +5,6 @@
       <li class="nav-item"><a href="<%= animes_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(animes_user_path(@user)) %>">Anime_title <span class="badge badge-secondary"><%= @count_animes %></span></a></li>
       <li class="nav-item"><a href="<%= reviews_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(reviews_user_path(@user)) %>">Review <span class="badge badge-secondary"><%= @count_reviews %></span></a></li>
     </ul>
-    <%= render "users", users: @users %>
+    <%= render 'animes/animes', animes: @animes %>
   </div>
 </div>

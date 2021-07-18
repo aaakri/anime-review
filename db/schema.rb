@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2021_05_23_103130) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["anime_id"], name: "index_reviews_on_anime_id"
-    t.index ["user_id", "anime_id"], name: "index_reviews_on_user_id_and_anime_id", unique: true
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
